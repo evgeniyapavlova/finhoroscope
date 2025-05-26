@@ -20,6 +20,9 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter(),
+		paths: {
+			base: process.env.NODE_ENV === 'production' ? '/finhoroscope' : ''
+		},
 		prerender: {
 			entries: [...zodiacSigns.map((sign) => `/${sign}`), '/']
 		}
