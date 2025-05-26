@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'TildaSans';
+	font-weight: 400;
+	src:
+		url('/fonts/TildaSans-Regular.woff2') format('woff2'),
+		url('/fonts/TildaSans-Regular.woff') format('woff');
+	font-style: normal;
+	font-display: swap;
+}
+
+
+@font-face {
+	font-family: 'TildaSans';
+	font-weight: 700;
+	src:
+		url('/fonts/TildaSans-Bold.woff2') format('woff2'),
+		url('/fonts/TildaSans-Bold.woff') format('woff');
+	font-style: normal;
+	font-display: swap;
+}
+
+
+
+@font-face {
+	font-family: 'Oregano';
+	font-weight: 400;
+	src:
+		url('/fonts/Oregano-Regular.woff2') format('woff2'),
+		url('/fonts/Oregano-Regular.woff') format('woff');
+	font-style: normal;
+	font-display: swap;
+}
