@@ -31,15 +31,26 @@
 
 <footer>
 	<div class="content">
-		{#each zodiacSigns as sign}
-			<a href="{base}/{sign}/" data-sign={sign} onclick={setSignStore}
-				>{capitalizeFirstLetter(sign)}</a
-			>
-		{/each}
+		<p class="footer-rw">
+			The content on the page is intended for Review, which means that the information provided on
+			the page is intended for users to view and study. It does not require any active actions from
+			the user, except for reading or viewing.
+		</p>
+
+		<div class="footer-links">
+			{#each zodiacSigns as sign}
+				<a href="{base}/{sign}/" data-sign={sign} onclick={setSignStore}
+					>{capitalizeFirstLetter(sign)}</a
+				>
+			{/each}
+		</div>
 	</div>
 </footer>
 
 <style>
+	.footer-rw {
+		color: hsl(261, 66%, 82%);
+	}
 	a {
 		color: var(--highlight-text);
 		text-decoration: none;
@@ -57,17 +68,36 @@
 		background-color: var(--highlight-bgr);
 		margin-top: 60px;
 		margin-bottom: -80px;
+		font-size: 16px;
 	}
 
-	.content {
+	.footer-links {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 8px;
 	}
 
-	@media screen and (max-width: 600px) {
-		.content {
+	.content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 48px;
+	}
+
+	@media screen and (max-width: 1000px) {
+		.footer-links {
 			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	@media screen and (max-width: 660px) {
+		.footer-links {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media screen and (max-width: 550px) {
+		.content {
+			grid-template-columns: repeat(1, 1fr);
 		}
 	}
 </style>

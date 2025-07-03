@@ -13,22 +13,10 @@
 		financial success. Let's try to delve into the intricate realm of share astrology, exploring
 		Vedic charts, planetary influences, and practical astrology tips for share market.
 	</p>
-	<a href={MAIN_LINK} class="button">More about share market and astrology</a>
+	<a href={$MAIN_LINK} class="button">More about share market and astrology</a>
 
 	<img
 		src="{base}/images/main_page/image8.png"
-		loading="lazy"
-		class="text-img"
-		alt="Platform interface"
-	/>
-	<img
-		src="{base}/images/main_page/image7.png"
-		loading="lazy"
-		class="text-img"
-		alt="Platform interface"
-	/>
-	<img
-		src="{base}/images/main_page/image5.png"
 		loading="lazy"
 		class="text-img"
 		alt="Platform interface"
@@ -74,7 +62,7 @@
 		likely you are to succeed in stock trading.
 	</p>
 
-	<a href={MAIN_LINK} class="button">Use astrology for share market</a>
+	<a href={$MAIN_LINK} class="button">Use astrology for share market</a>
 
 	<h3>Real-World Examples of Astrology in Trading</h3>
 	<p>
@@ -142,7 +130,7 @@
 		</li>
 	</ol>
 
-	<a href={MAIN_LINK} class="button">Astrology in share market</a>
+	<a href={$MAIN_LINK} class="button">Astrology in share market</a>
 
 	<h2 class="title">Astrology Tips for Success</h2>
 	<p>Key yogas for success include:</p>
