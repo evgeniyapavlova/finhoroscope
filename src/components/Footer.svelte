@@ -32,7 +32,7 @@
 <footer>
 	<div class="content content-0">
 		<div>
-			<a href={base}>Home</a>
+			<a href="{base}/">Home</a>
 		</div>
 	</div>
 	<div class="content content-1">
