@@ -4,6 +4,8 @@
 	import '$lib/styles/fonts.scss';
 	import '$lib/styles/styles.scss';
 
+	import { signStore } from '$lib/signStore.js';
+
 	import Card from '../../components/Card.svelte';
 
 	export let data;
@@ -12,10 +14,14 @@
 
 	let content;
 
-	onMount(async () => {
+	$: if ($signStore) {
+		loadContent($signStore);
+	}
+
+	async function loadContent(sign) {
 		const module = await import(`$lib/data/${sign}.json`);
 		content = module.default;
-	});
+	}
 </script>
 
 <div class="decorations">
@@ -31,7 +37,7 @@
 			<h2><span>for</span> <span>{@html content.title}</span></h2>
 
 			<div class="horo-image">
-				<img src="{base}/images/{sign}.webp" loading="lazy" alt="{sign} sign" />
+				<img src="{base}/images/{$signStore}.webp" loading="lazy" alt="{$signStore} sign" />
 			</div>
 		</div>
 

@@ -4,8 +4,6 @@
 	import { fade } from 'svelte/transition';
 	export let i, idx, content;
 
-    console.log(content);
-
 	const titles = [
 		'overall financial situation',
 		'financial management',
@@ -40,15 +38,15 @@
 </script>
 
 <div class="content-card content-card-{i}">
-	<div class="content-image" class:visible={visible} bind:this={element}>
+	<div class="content-image" class:visible bind:this={element}>
 		<img src="{base}/images/card{i}.webp" loading="lazy" alt="Card {i} illustration" />
 	</div>
-	<div class="content-text" >
-		<h3 class="h3-item" class:visible={visible}>{@html titles[idx]}:</h3>
+	<div class="content-text">
+		<h3 class="h3-item" class:visible>{@html titles[idx]}:</h3>
 
 		<ul class="outer">
 			{#each content as j}
-				<li class:visible={visible} class="li-item">
+				<li class:visible class="li-item">
 					<div class="li-bullet"></div>
 					<div class="li-content">
 						{#if typeof j === 'object'}
